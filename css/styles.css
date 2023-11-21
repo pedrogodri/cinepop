@@ -13,11 +13,16 @@
     padding: 40px;
 }
 
-.msg {
-    width: 60%;
-    margin: 0 auto;
-    padding: 0 10px;
-    border: solid 1px #;
+.card-btn {
+    color: #000;
+    background-color: greenyellow;
+    border: 2px solid greenyellow;
+    width: 100%;
 }
 
-.
+.card-btn:hover {
+    color: greenyellow;
+    background-color: transparent;
+    border: 2px solid greenyellow;
+    width: 100%;
+}
