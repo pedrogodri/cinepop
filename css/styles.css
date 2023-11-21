@@ -1,3 +1,23 @@
-body {
-    background-color: #ccc;
+.bold {
+    font-weight: bold;
 }
+
+.bg-color {
+    background: aquamarine !important;
+}
+
+#main-container {
+    background-color: #000;
+    color: #fff;
+    min-height: 65vh;
+    padding: 40px;
+}
+
+.msg {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: solid 1px #;
+}
+
+.
