@@ -1,6 +1,15 @@
 <?php
-require_once("globals.php");
-require_once("db.php");
+    require_once("globals.php");
+    require_once("db.php");
+    require_once("models/Message.php");
+
+    $message = new Message($BASE_URL);
+
+    $flassMessage = $message->getMessage();
+
+    if(!empty($flassMessage["msg"])) {
+        $message->clearMessage();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +51,7 @@ require_once("db.php");
     <?php if (!empty($flassMessage["msg"])) : ?>
         <div class="row d-flex justify-content-center">
             <div class="col-6">
-                <div class="msg <?= $flassMessage["type"] ?> alert alert-success text-center" role="alert" *ngIf="sucessoFeedback">
+                <div class="msg <?= $flassMessage["type"] ?> alert text-center" role="alert" *ngIf="sucessoFeedback">
                     <?= $flassMessage["msg"] ?>
                 </div>
             </div>
