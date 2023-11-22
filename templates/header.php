@@ -27,15 +27,15 @@
 
 <body>
     <header>
-        <nav class="navbar bg-body-tertiary bg-color">
+        <nav class="navbar bg-body-tertiary bg-color-header bold">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?= $BASE_URL ?>index.php">
                     <img src="<?= $BASE_URL ?>img/logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    Cinepop
+                    <span class="text-white">Cinepop</span> 
                 </a>
                 <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                    <li class="nav-item lista-hover">
+                        <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
                             <i class="fa-solid fa-user"></i>
                             Entrar | Cadastrar
                         </a>
@@ -43,7 +43,7 @@
                 </ul>
                 <form action="" method="get" class="d-flex justify-content-center" role="search">
                     <input class="form-control me-2" name="q" id="search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    <button class="btn btn-outline-green" type="submit"><i class="fas fa-search fa-green"></i></button>
                 </form>
             </div>
         </nav>

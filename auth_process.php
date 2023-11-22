@@ -17,6 +17,11 @@
         $confirm_password = filter_input(INPUT_POST, "confirmpassword");
 
         if($name && $lastname && $email && $password) {
+            if($password === $confirm_password) {
+
+            } else {
+                $message->setMessage("As senhas não são iguais", "alert-danger", "back");
+            }
 
         } else {
             $message->setMessage("Por favor, preencha todos os campos", "alert-danger", "back");

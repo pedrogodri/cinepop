@@ -2,27 +2,55 @@
     font-weight: bold;
 }
 
-.bg-color {
-    background: aquamarine !important;
+.bg-color-header {
+    background: #69B983 !important;
 }
 
 #main-container {
-    background-color: #000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #4A692D;
     min-height: 65vh;
     padding: 40px;
 }
 
 .card-btn {
-    color: #000;
-    background-color: greenyellow;
-    border: 2px solid greenyellow;
+    color: #ffffff;
+    background-color: #5E875B;
+    border: 2px solid #5E875B;
     width: 100%;
+    transition: .5s;
 }
 
 .card-btn:hover {
-    color: greenyellow;
+    color: #5E875B;
     background-color: transparent;
-    border: 2px solid greenyellow;
+    border: 2px solid #5E875B;
     width: 100%;
+}
+
+.lista-hover {
+    transition: .1s ease-out;
+}
+
+.lista-hover:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.btn-outline-green {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    transition: .3s;
+}
+
+.btn-outline-green:hover {
+    background-color: #ffffff;
+}
+
+.fa-green {
+    color: #ffffff;
+    transition: .3s;
+}
+
+.btn-outline-green:hover > .fa-green {
+    color: #69B983 !important;
 }
