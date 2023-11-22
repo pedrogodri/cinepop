@@ -2,7 +2,7 @@
 
     class Message {
         private $url;
-        private function __construct($url) {
+        public function __construct($url) {
             $this->url = $url;
         }
 
