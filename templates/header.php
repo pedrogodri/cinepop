@@ -2,6 +2,7 @@
     require_once("globals.php");
     require_once("db.php");
     require_once("models/Message.php");
+    require_once("dao/UserDAO.php");
 
     $message = new Message($BASE_URL);
 
@@ -10,6 +11,9 @@
     if(!empty($flassMessage["msg"])) {
         $message->clearMessage();
     }
+
+    $userDAO = new UserDAO($conn, $BASE_URL);
+    $userData = $userDAO->verifyToken(false);
 ?>
 
 <!DOCTYPE html>
@@ -34,12 +38,39 @@
                     <span class="text-white">Cinepop</span> 
                 </a>
                 <ul class="nav justify-content-center">
-                    <li class="nav-item lista-hover">
-                        <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
-                            <i class="fa-solid fa-user"></i>
-                            Entrar | Cadastrar
-                        </a>
-                    </li>
+                    <?php if($userData): ?>
+                        <li class="nav-item lista-hover">
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                                <i class="fa-solid fa-user"></i>
+                                Entrar | Cadastrar
+                            </a>
+                        </li>
+                        <li class="nav-item lista-hover">
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                                <i class="fa-solid fa-user"></i>
+                                Entrar | Cadastrar
+                            </a>
+                        </li>
+                        <li class="nav-item lista-hover">
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                                <i class="fa-solid fa-user"></i>
+                                Entrar | Cadastrar
+                            </a>
+                        </li>
+                        <li class="nav-item lista-hover">
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                                <i class="fa-solid fa-user"></i>
+                                Entrar | Cadastrar
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item lista-hover">
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
+                                <i class="fa-solid fa-user"></i>
+                                Entrar | Cadastrar
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
                 <form action="" method="get" class="d-flex justify-content-center" role="search">
                     <input class="form-control me-2" name="q" id="search" type="search" placeholder="Search" aria-label="Search">

@@ -6,6 +6,8 @@
     require_once("dao/UserDAO.php");
 
     $message = new Message($BASE_URL);
+
+    $userDAO = new UserDAO($conn, $BASE_URL);
     
     $type = filter_input(INPUT_POST, "type");
 
@@ -18,7 +20,24 @@
 
         if($name && $lastname && $email && $password) {
             if($password === $confirm_password) {
+                if($userDAO->findByEmail($email) === false) {
+                    $user = new User();
+                    
+                    $userToken = $user->generateToken();
+                    $finalPasword = $user->generatePassword($password);
+                    
+                    $user->name = $name;
+                    $user->lastname = $lastname;
+                    $user->email = $email;
+                    $user->password = $finalPasword;
+                    $user->token = $userToken;
 
+                    $auth = true;
+
+                    $userDAO->create($user, $auth);
+                } else {
+                    $message->setMessage("Usuário já cadastrado, tente novamente.", "alert-danger", "back");
+                }
             } else {
                 $message->setMessage("As senhas não são iguais", "alert-danger", "back");
             }
