@@ -45,18 +45,18 @@
         public function update(User $user) {
 
         }
-        public function verifyToken($protected = false) {
+        public function verifyToken($protected = true) {
             if(!empty($_SESSION["token"])) {
                 $token = $_SESSION["token"];
                 $user = $this->findByToken($token);
 
                 if($user) {
                     return $user;
-                } else {
+                } else if($protected) {
                     $this->message->setMessage("Faça a autentificação para acesar esta página!", "alert-danger", "index.php");
                 }
-            } else {
-                return false;
+            } else if($protected) {
+                $this->message->setMessage("Faça a autentificação para acesar esta página!", "alert-danger", "index.php");
             }
         }
         public function setTokenSession($token, $redirect = true) {
