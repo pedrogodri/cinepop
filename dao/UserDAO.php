@@ -106,6 +106,12 @@
         public function findById($id) {
 
         }
+
+        public function destroyToken() {
+            $_SESSION["token"] = "";
+
+            $this->message->setMessage("Você saiu", "alert-success", "index.php");
+        }
         public function changePassword(User $user) {
 
         }
