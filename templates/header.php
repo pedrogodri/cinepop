@@ -40,27 +40,25 @@
                 <ul class="nav justify-content-center">
                     <?php if($userData): ?>
                         <li class="nav-item lista-hover">
-                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
-                                <i class="fa-solid fa-user"></i>
-                                Entrar | Cadastrar
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>newmovie.php">
+                                <i class="far fa-plus-square"></i>
+                                Incluir Filmes
                             </a>
                         </li>
                         <li class="nav-item lista-hover">
-                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
-                                <i class="fa-solid fa-user"></i>
-                                Entrar | Cadastrar
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>dashboard.php">
+                                Meus Filmes
                             </a>
                         </li>
                         <li class="nav-item lista-hover">
-                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
-                                <i class="fa-solid fa-user"></i>
-                                Entrar | Cadastrar
+                            <a class="nav-link bold text-white " aria-current="page" href="<?= $BASE_URL ?>editprofile.php">
+                                <?= $userData->name ?>
                             </a>
                         </li>
                         <li class="nav-item lista-hover">
-                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>auth.php">
-                                <i class="fa-solid fa-user"></i>
-                                Entrar | Cadastrar
+                            <a class="nav-link active text-white " aria-current="page" href="<?= $BASE_URL ?>logout.php">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Sair
                             </a>
                         </li>
                     <?php else: ?>
