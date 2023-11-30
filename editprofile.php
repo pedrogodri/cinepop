@@ -31,7 +31,7 @@
                         <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Digite seu sobrenome" value="<?= $userData->lastname ?>">
                     </div>
                     <div class="form-group">
-                        <label for="lastname">E-mail:</label>
+                        <label for="email">E-mail:</label>
                         <input type="text" class="form-control disabled" id="email" name="email" placeholder="Digite seu e-mail" value="<?= $userData->email ?>" readonly>
                     </div>
                     <input type="submit" class="btn form-btn" value="Alterar">
@@ -51,6 +51,26 @@
                 </div>
             </div>
         </form> 
+        <div class="row" id="change-password-container">
+            <div class="col-md-4">
+                <h2>Alterar a senha:</h2>
+                <p class="page-description">
+                    Digite a nova senha e confirme, para alterar sua senha:
+                </p>
+                <form action="<?=$BASE_URL ?>user_process.php" method="post">
+                    <input type="hidden" name="type" value="changepassword">
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua nova senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmpassword">Confirmação de senha:</label>
+                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme a sua nova senha">
+                    </div>
+                    <input type="submit" class="btn form-btn" value="Alterar Senha">
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
