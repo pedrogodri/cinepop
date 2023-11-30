@@ -14,6 +14,8 @@
     }
 ?>
 
+<link rel="stylesheet" href="<?= $BASE_URL ?>css/editprofile.css">
+
 <div id="main-container" class="container-fluid">
     <div class="col-md-12">
         <form action="<?=$BASE_URL ?>user_process.php" method="post" enctype="multipart/form-data">
@@ -34,7 +36,7 @@
                         <label for="email">E-mail:</label>
                         <input type="text" class="form-control disabled" id="email" name="email" placeholder="Digite seu e-mail" value="<?= $userData->email ?>" readonly>
                     </div>
-                    <input type="submit" class="btn form-btn" value="Alterar">
+                    <input type="submit" class="btn card-btn mt-4" value="Alterar">
                 </div>
                 <div class="col-md-4">
                     <div id="profile-img-container" style="background-image: url('<?=$BASE_URL ?>img/users/<?= $userData->image?>');"></div>
@@ -67,7 +69,7 @@
                         <label for="confirmpassword">Confirmação de senha:</label>
                         <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme a sua nova senha">
                     </div>
-                    <input type="submit" class="btn form-btn" value="Alterar Senha">
+                    <input type="submit" class="btn card-btn mt-4" value="Alterar Senha">
                 </form>
             </div>
         </div>

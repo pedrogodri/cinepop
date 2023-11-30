@@ -51,7 +51,7 @@
             bio = :bio,
             token = :token
             WHERE id = :id");
-
+            // $stmt->bind_param("ssii", $nome, $sobrenmome);
             $stmt->bindParam(":id", $user->id);
             $stmt->bindParam(":name", $user->name);
             $stmt->bindParam(":lastname", $user->lastname);
