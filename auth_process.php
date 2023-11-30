@@ -46,5 +46,15 @@
             $message->setMessage("Por favor, preencha todos os campos", "alert-danger", "back");
         }
     } else if($type === "login") {
+        $email = filter_input(INPUT_POST, "email");
+        $password = filter_input(INPUT_POST, "password");
+
+        if($userDAO->authenticateUser($email, $password)) {
+
+        } else {
+            $message->setMessage("Email ou senha incorretos", "alert-danger", "back");
+        }
+    } else {
+        $message->setMessage("Informações inválidas", "alert-danger", "index.php");
     }
 ?>
