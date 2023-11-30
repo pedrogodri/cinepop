@@ -46,9 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label for="bio">Sobre você:</label>
-                        <textarea class="form-control" name="bio" id="bio" rows="5" placeholder="Conte quem você é, o que faz e onde trabalha...">
-                        <?= $userData->bio?>
-                        </textarea>
+                        <textarea class="form-control" name="bio" id="bio" rows="5" placeholder="Conte quem você é, o que faz e onde trabalha..."><?= $userData->bio?></textarea>
                     </div>
                 </div>
             </div>
