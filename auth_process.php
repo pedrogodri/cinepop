@@ -50,7 +50,7 @@
         $password = filter_input(INPUT_POST, "password");
 
         if($userDAO->authenticateUser($email, $password)) {
-
+            $message->setMessage("Seja bem-vindo!", "alert-success", "editprofile.php");
         } else {
             $message->setMessage("Email ou senha incorretos", "alert-danger", "back");
         }

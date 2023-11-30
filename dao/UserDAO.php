@@ -42,8 +42,29 @@
                 $this->setTokenSession($user->token);
             }
         }
-        public function update(User $user) {
+        public function update(User $user, $redirect = false) {
+            $stmt = $this->conn->prepare("UPDATE users SET
+            name = :name,
+            lastname = :lastname,
+            email = :email,
+            image = :image,
+            bio = :bio,
+            token = :token
+            WHERE id = :id");
 
+            $stmt->bindParam(":id", $user->id);
+            $stmt->bindParam(":name", $user->name);
+            $stmt->bindParam(":lastname", $user->lastname);
+            $stmt->bindParam(":email", $user->email);
+            $stmt->bindParam(":image", $user->image);
+            $stmt->bindParam(":bio", $user->bio);
+            $stmt->bindParam(":token", $user->token);
+
+            $stmt->execute();
+
+            if($redirect) {
+                $this->message->setMessage("Perfil atualizado com sucesso", "alert-success", "editprofile.php");
+            }
         }
         public function verifyToken($protected = true) {
             if(!empty($_SESSION["token"])) {
@@ -71,10 +92,10 @@
             if($user) {
                 if(password_verify($password, $user->password)) {
                     $token = $user->generateToken();
-                    $this->setTokenSession($token);
+                    $this->setTokenSession($token, false);
 
                     $user->token = $token;
-                    $this->update($user);
+                    $this->update($user, false);
                     
                     return true;
                 } else {
@@ -118,7 +139,7 @@
                 return false;
             }
         }
-        public function findById($id) {
+        public function findById($user) {
 
         }
 
