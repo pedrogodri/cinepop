@@ -149,7 +149,13 @@
             $this->message->setMessage("Você saiu", "alert-success", "index.php");
         }
         public function changePassword(User $user) {
+            $stmt = $this->conn->prepare("UPDATE users SET password = :password WHERE id = :id");
+            $stmt->bindParam(":id", $user->id);
+            $stmt->bindParam(":password", $user->password);
 
+            $stmt->execute();
+
+            $this->message->setMessage("Senha alterada com sucesso!", "alert-success", "editprofile.php");
         }
     }
 
