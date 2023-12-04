@@ -1,0 +1,81 @@
+#main-container {
+    background-color: #ffffff;
+    color: #4A692D;
+    min-height: 65vh;
+    padding: 40px;
+}
+
+.section-title  {
+    font-size: 24px;
+    border-left: 4px solid #69B983;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+.section-description {
+    color: #4A692D;
+    font-size: 18px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.movie-card {
+    background-color: aqua;
+    width: 18%;
+    margin: 0px 1% 30px 1%;
+
+}
+
+.movie-card .card-img-top {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    height: 3rem;
+}
+
+.card-title a {
+    font-size: 16px;
+    color: red;
+}
+
+.fas.fa-star {
+    color: rebeccapurple;
+}
+
+.rating {
+    color: blue;
+}
+
+.rate-btn {
+    margin-bottom: 15px;
+    color: aqua;
+    background-color: black;
+    border-color: black;
+    width: 100%;
+    font-weight: bold;
+}
+
+.rate-btn:hover {
+    background-color: rgb(61, 61, 61);
+    border-color: rgb(61, 61, 61);
+}
+
+.card-rating-img {
+    width: 25px;
+    height: 25px;
+}
+
+.empty-list {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}

@@ -25,6 +25,10 @@
                 <input type="file" class="form-control-file" id="image" name="image">
             </div>
             <div class="form-group">
+                <label for="image">Duração:</label>
+                <input type="text" class="form-control" id="length" name="length">
+            </div>
+            <div class="form-group">
                 <label for="category">Categoria:</label>
                 <select class="form-control" name="category" id="category">
                     <option value="">Selcione</option>
