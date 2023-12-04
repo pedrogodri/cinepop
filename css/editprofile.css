@@ -8,8 +8,8 @@
     margin: 15px auto;
 }
 
-page-description {
-    color: red;
+.page-description {
+    color: #5E875B;
 }
 
 #bio {

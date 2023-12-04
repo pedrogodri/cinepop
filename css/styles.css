@@ -47,3 +47,46 @@
 .btn-outline-green:hover > .fa-green {
     color: #69B983 !important;
 }
+
+#main-container {
+    background-color: #ffffff;
+    color: #4A692D;
+    min-height: 65vh;
+    padding: 40px;
+}
+
+.section-title  {
+    font-size: 24px;
+    border-left: 4px solid #69B983;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+.section-description {
+    color: #4A692D;
+    font-size: 18px;
+}
+
+#main-container {
+    background-color: #ffffff;
+    color: #4A692D;
+    min-height: 65vh;
+    padding: 40px;
+}
+
+.section-title  {
+    font-size: 24px;
+    border-left: 4px solid #69B983;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+.section-description {
+    color: #4A692D;
+    font-size: 18px;
+}
+
+.card-rating-img {
+    width: 25px;
+    height: 25px;
+}

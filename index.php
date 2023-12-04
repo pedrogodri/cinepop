@@ -5,7 +5,6 @@
     $movieDAO = new MovieDAO($conn, $BASE_URL);
 
     $latestMovies = $movieDAO->getLatestMovies();
-    print_r($latestMovies);
     $actionMovies = $movieDAO->getMoviesByCategory("Ação");
     $comedyMovies = $movieDAO->getMoviesByCategory("Comédia");
 ?>

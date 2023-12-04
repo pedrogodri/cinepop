@@ -1,0 +1,61 @@
+#add-movie-container .card-btn {
+    width: auto;
+}
+
+#add-movie-container {
+    text-align: right;
+}
+
+#movies-dashboard .table {
+    color: red;
+}
+
+#movies-dashboard .table th {
+    border-top: none;
+}
+
+#movies-dashboard .table tr {
+    padding: 15px 0;
+}
+
+.table-movie-title {
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    transition: .5s;
+}
+
+.table-movie-title:hover {
+    color: rgb(0, 255, 0);
+}
+
+.actions-column {
+    max-width: 75px;
+    text-align: center;
+}
+
+.actions-column form {
+    display: inline-block;
+}
+
+.edit-btn {
+    background-color: #d3b12a;
+    color: #ffffff;
+}
+
+.edit-btn:hover {
+    color: #d3b12a;
+    background-color: transparent;
+    border: 2px solid #d3b12a;
+}
+
+.delete-btn {
+    background-color: #cc403b;
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    color: #cc403b;
+    background-color: transparent;
+    border: 2px solid #cc403b;
+
+}

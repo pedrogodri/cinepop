@@ -4,17 +4,17 @@
             <div class="row text-center d-flex justify-content-center pt-5">
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">Adicionar Filme</a>
+                        <a href="<?= $BASE_URL ?>newmovie.php" class="text-white">Adicionar Filme</a>
                     </h6>
                 </div>
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">Adicionar crítica</a>
+                        <a href="<?= $BASE_URL ?>" class="text-white">Adicionar crítica</a>
                     </h6>
                 </div>
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="#!" class="text-white">Entrar | Cadastrar</a>
+                        <a href="<?= $BASE_URL ?>auth.php" class="text-white">Entrar | Cadastrar</a>
                     </h6>
                 </div>
             </div>
